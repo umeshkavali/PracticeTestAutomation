@@ -69,14 +69,15 @@ public static WebDriver initilizeBrowser() throws IOException
 		        driver=new ChromeDriver(); break;
 		    case "edge":
 		    	driver=new EdgeDriver(); break;
-		    case "firefox":
-		    	driver = new FirefoxDriver(); break;
+//		    case "firefox":
+//		    	driver = new FirefoxDriver(); break;
 
 		    default:
 		        System.out.println("No matching browser");
 //		        driver=null;
 			}
 		}
+	
 	 driver.manage().deleteAllCookies(); 
 	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
