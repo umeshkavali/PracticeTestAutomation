@@ -20,48 +20,48 @@ public class BaseClass
 {
 	 static WebDriver driver;
      static Properties p;
-     static Logger logger;
+//     static Logger logger;
   	     
 @SuppressWarnings("deprecation")
 public static WebDriver initilizeBrowser() throws IOException
 {
-	if(getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
-	{
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		
-		//os
-		if (getProperties().getProperty("os").equalsIgnoreCase("windows")) 
-		{
-		    capabilities.setPlatform(Platform.WIN11);
-		} 
-		
-		else if (getProperties().getProperty("os").equalsIgnoreCase("mac")) 
-		{
-		    capabilities.setPlatform(Platform.MAC);
-		} 
-		
-		else
-		{
-			System.out.println("No matching OS..");
-		}
-		
-		//browser
-		switch (getProperties().getProperty("browser").toLowerCase()) 
-		{
-		    case "chrome":
-		        capabilities.setBrowserName("chrome");
-		        break;
-		    case "edge":
-		        capabilities.setBrowserName("MicrosoftEdge");
-		        break;
-		    default:
-		        System.out.println("No matching browser");
-		     }
-       
-        driver = new RemoteWebDriver(new URL("https://practicetestautomation.com/practice-test-login/"),capabilities);
-		
-	}
-	else if(getProperties().getProperty("execution_env").equalsIgnoreCase("local"))
+//	if(getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
+//	{
+//		DesiredCapabilities capabilities = new DesiredCapabilities();
+//		
+//		//os
+//		if (getProperties().getProperty("os").equalsIgnoreCase("windows")) 
+//		{
+//		    capabilities.setPlatform(Platform.WIN10);
+//		} 
+//		
+//		else if (getProperties().getProperty("os").equalsIgnoreCase("mac")) 
+//		{
+//		    capabilities.setPlatform(Platform.MAC);
+//		} 
+//		
+//		else
+//		{
+//			System.out.println("No matching OS..");
+//		}
+//		
+//		//browser
+//		switch (getProperties().getProperty("browser").toLowerCase()) 
+//		{
+//		    case "chrome":
+//		        capabilities.setBrowserName("chrome");
+//		        break;
+//		    case "edge":
+//		        capabilities.setBrowserName("MicrosoftEdge");
+//		        break;
+//		    default:
+//		        System.out.println("No matching browser");
+//		     }
+//       
+//        driver = new RemoteWebDriver(new URL("https://practicetestautomation.com/practice-test-login/"),capabilities);
+//		
+//	}
+	if(getProperties().getProperty("execution_env").equalsIgnoreCase("local"))
 		{
 			switch(getProperties().getProperty("browser").toLowerCase()) 
 			{
@@ -108,28 +108,5 @@ public static Properties getProperties() throws IOException
 
 
 
-public static String randomeString()
-{
-	String generatedString=RandomStringUtils.randomAlphabetic(5);
-	return generatedString;
-}
-
-
-public static String randomeNumber()
-{
-	String generatedString=RandomStringUtils.randomNumeric(10);
-	return generatedString;
-}
-
-	
-public static String randomAlphaNumeric()
-{
-	String str=RandomStringUtils.randomAlphabetic(5);
-	String num=RandomStringUtils.randomNumeric(10);
-	return str+num;
-}
-
-
-	
 
 }

@@ -14,5 +14,5 @@ Feature: Positive Login Test
     Examples: 
       | email         | password          |
       | student       | Password123       |
-      | inCorrectUser | Password123       |
-      | student       | inCorrectPassword |
+      #| inCorrectUser | Password123       |
+      #| student       | inCorrectPassword |

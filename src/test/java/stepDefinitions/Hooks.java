@@ -18,7 +18,7 @@ public class Hooks extends BaseClass
    {
    	driver=BaseClass.initilizeBrowser();
    	    	
-   	p=BaseClass.getProperties();
+//  p=BaseClass.getProperties();
    	driver.get(p.getProperty("appURL"));
    	driver.manage().window().maximize();
    
