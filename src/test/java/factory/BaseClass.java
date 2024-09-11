@@ -2,18 +2,12 @@ package factory;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
-import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.logging.log4j.core.Logger;
-import org.openqa.selenium.Platform;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 public class BaseClass
