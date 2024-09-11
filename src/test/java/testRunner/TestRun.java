@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		features= {".//features"},
+		features= {"C:\\Eclipse Projects\\Interview\\PracticeTestAutomation\\src\\test\\java\\features\\TC_001PositiveLogInTest.feature"},
 		glue="stepDefinitions",
 		plugin= {"pretty", "html:reports/myreport.html", 
 				"rerun:target/rerun.txt",
