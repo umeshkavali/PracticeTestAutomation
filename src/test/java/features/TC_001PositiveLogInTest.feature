@@ -1,4 +1,4 @@
-Feature: Positive Login Test
+Feature: Login Test
 
   Scenario Outline: Checking with Valid and Invalid Credentials
     Given User navigates to Login Page
@@ -14,5 +14,5 @@ Feature: Positive Login Test
     Examples: 
       | email         | password          |
       | student       | Password123       |
-      #| inCorrectUser | Password123       |
-      #| student       | inCorrectPassword |
+      | inCorrectUser | Password123       |
+      | student       | inCorrectPassword |

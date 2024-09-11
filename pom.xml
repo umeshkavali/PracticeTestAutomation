@@ -20,12 +20,14 @@
 
   <dependencies>
   
-  <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
+
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports-cucumber4-adapter</artifactId>
     <version>1.2.1</version>
 </dependency>
+
 
 <!-- https://mvnrepository.com/artifact/io.github.qsy7.java.modules.browser.drivers/chromedriver -->
 <dependency>
@@ -34,20 +36,20 @@
     <version>0.3.3</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
+<dependency>
+    <groupId>com.vimalselvam</groupId>
+    <artifactId>cucumber-extentsreport</artifactId>
+    <version>3.1.1</version>
+</dependency>
+
 
 
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.23.1</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-chrome-driver</artifactId>
-    <version>4.23.1</version>
+    <version>4.24.0</version>
 </dependency>
 
 
@@ -100,10 +102,14 @@
     <version>3.16.0</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/io.github.qsy7.java.modules.browser.drivers/chromedriver -->
+<dependency>
+    <groupId>io.github.qsy7.java.modules.browser.drivers</groupId>
+    <artifactId>chromedriver</artifactId>
+    <version>0.3.3</version>
+</dependency>
 
-
-    
-    
+   
   </dependencies>
 
   <build>

@@ -2,14 +2,17 @@ package stepDefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import factory.BaseClass;
 import io.cucumber.java.en.*;
+import pageObjects.BasePage;
 import pageObjects.LoginPage;
 
-public class PositiveStep 
+public class LoginTestStep
 {
-	WebDriver driver;
-	LoginPage lp;
+//	public WebDriver driver;
+	public LoginPage lp;
 	
 	
 	@Given("User navigates to Login Page")
@@ -42,24 +45,28 @@ public class PositiveStep
 	@Then("User should verify the URL as practicetestautomation logged in successfully")
 	public void user_should_verify_the_url_as_practicetestautomation_logged_in_successfully()
 	{
-		String actual_Title = driver.getTitle();
 		
-		if(actual_Title.equals("Logged In Successfully | Practice Test Automation"))
-		{
-			System.out.println("Title Validated Successfully");
-		}
-		
-		else
-		{
-			System.out.println("Couldn't validate the Title");
-//			driver.close();
-		}
+		String actual_Url = BaseClass.getDriver().getCurrentUrl();
+		String expected_Url = "https://practicetestautomation.com/logged-in-successfully/";
+		Assert.assertEquals(actual_Url, expected_Url);
+		System.out.println("URL is Successfully verified");
+				
+//		if(BaseClass.getDriver().getCurrentUrl().equals("https://practicetestautomation.com/logged-in-successfully/"))
+//		{
+//			System.out.println("URL Verified Successfully!");
+//		}
+//		
+//		else
+//		{
+//			System.out.println("Couldn't be able to verify the URL");
+//		}		
+
 	}
 
 	@Then("User should verify the text as Congratulations or successfully logged in")
 	public void user_should_verify_the_text_as_congratulations_or_successfully_logged_in()
 	{
-	    String actual_text = driver.findElement(By.xpath("//strong[contains(text(),'Congratulations student. You successfully logged i')]")).getText();
+	    String actual_text = BaseClass.getDriver().findElement(By.xpath("//strong[contains(text(),'Congratulations student. You successfully logged i')]")).getText();
 	    String expected_text = "Congratulations student. You successfully logged in!";
 	    
 	    if(actual_text.equals(expected_text))
@@ -76,8 +83,8 @@ public class PositiveStep
 	@Then("User should verify the Logout displayed on the page")
 	public void user_should_verify_the_logout_displayed_on_the_page() 
 	{
-	    boolean logout = driver.findElement(By.xpath("//a[normalize-space()='Log out']")).isDisplayed();
-	    System.out.println(logout);
+	    boolean logout = BaseClass.getDriver().findElement(By.xpath("//a[normalize-space()='Log out']")).isDisplayed();
+	    System.out.println("Logout button Display Status is:"+logout);
 	}
 
 	
@@ -91,6 +98,6 @@ public class PositiveStep
 	@Then("Finally User should click on close the browser")
 	public void finally_user_should_click_on_close_the_browser() 
 	{
-	   driver.quit();
+		BaseClass.getDriver().quit();
 	}
 }

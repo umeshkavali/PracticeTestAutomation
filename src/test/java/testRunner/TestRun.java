@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		features= {"features"},
+		features= {".//features"},
 		glue="stepDefinitions",
 		plugin= {"pretty", "html:reports/myreport.html", 
 				"rerun:target/rerun.txt",

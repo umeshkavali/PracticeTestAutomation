@@ -18,49 +18,15 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class BaseClass
 {
-	 static WebDriver driver;
-     static Properties p;
+	
+	static WebDriver driver;
+    static Properties p;
 //     static Logger logger;
   	     
 @SuppressWarnings("deprecation")
 public static WebDriver initilizeBrowser() throws IOException
 {
-//	if(getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
-//	{
-//		DesiredCapabilities capabilities = new DesiredCapabilities();
-//		
-//		//os
-//		if (getProperties().getProperty("os").equalsIgnoreCase("windows")) 
-//		{
-//		    capabilities.setPlatform(Platform.WIN10);
-//		} 
-//		
-//		else if (getProperties().getProperty("os").equalsIgnoreCase("mac")) 
-//		{
-//		    capabilities.setPlatform(Platform.MAC);
-//		} 
-//		
-//		else
-//		{
-//			System.out.println("No matching OS..");
-//		}
-//		
-//		//browser
-//		switch (getProperties().getProperty("browser").toLowerCase()) 
-//		{
-//		    case "chrome":
-//		        capabilities.setBrowserName("chrome");
-//		        break;
-//		    case "edge":
-//		        capabilities.setBrowserName("MicrosoftEdge");
-//		        break;
-//		    default:
-//		        System.out.println("No matching browser");
-//		     }
-//       
-//        driver = new RemoteWebDriver(new URL("https://practicetestautomation.com/practice-test-login/"),capabilities);
-//		
-//	}
+	
 	if(getProperties().getProperty("execution_env").equalsIgnoreCase("local"))
 		{
 			switch(getProperties().getProperty("browser").toLowerCase()) 
@@ -80,7 +46,6 @@ public static WebDriver initilizeBrowser() throws IOException
 	
 	 driver.manage().deleteAllCookies(); 
 	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 	 
 	 return driver;
 	 

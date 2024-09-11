@@ -10,29 +10,28 @@ import io.cucumber.java.*;
 
 public class Hooks extends BaseClass
 {
-	WebDriver driver;
-	Properties p;
+	public WebDriver driver;
+	public Properties p;
     
 	@Before
    public void setup() throws IOException
    {
-   	driver=BaseClass.initilizeBrowser();
-   	    	
-//  p=BaseClass.getProperties();
-   	driver.get(p.getProperty("appURL"));
-   	driver.manage().window().maximize();
+		driver=BaseClass.initilizeBrowser();   	    	
+		p=BaseClass.getProperties();
+		driver.get(p.getProperty("appURL"));
+		driver.manage().window().maximize();
    
    			
 	}
 		
    
-//   @After
-//   public void tearDown(Scenario scenario) 
-//   {
-//       		
-//      driver.quit();
-//      
-//   }
+   @After
+   public void tearDown(Scenario scenario) 
+   {
+       		
+      driver.quit();
+      
+   }
    
 
    @AfterStep
