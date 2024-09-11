@@ -29,13 +29,6 @@
 </dependency>
 
 
-<!-- https://mvnrepository.com/artifact/io.github.qsy7.java.modules.browser.drivers/chromedriver -->
-<dependency>
-    <groupId>io.github.qsy7.java.modules.browser.drivers</groupId>
-    <artifactId>chromedriver</artifactId>
-    <version>0.3.3</version>
-</dependency>
-
 <!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
 <dependency>
     <groupId>com.vimalselvam</groupId>
