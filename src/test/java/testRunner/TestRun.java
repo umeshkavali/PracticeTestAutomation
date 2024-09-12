@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		dryRun=false,    // checks mapping between scenario steps and step definition methods
 		monochrome=true,    // to avoid junk characters in output
-		publish=true  
+		publish=true  		// the reports can see it in web browser if it's in true
 		
 		)
 

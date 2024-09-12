@@ -38,7 +38,7 @@ public class Hooks extends BaseClass
    public void addScreenshot(Scenario scenario) 
    {
        
-   	// this is for cucumber junit report
+   	// this is for cucumber jUnit Report
        if(scenario.isFailed()) 
        {
        	

@@ -11,7 +11,6 @@ import pageObjects.LoginPage;
 
 public class LoginTestStep
 {
-//	public WebDriver driver;
 	public LoginPage lp;
 	
 	
@@ -48,18 +47,7 @@ public class LoginTestStep
 		
 		String actual_Url = BaseClass.getDriver().getCurrentUrl();
 		String expected_Url = "https://practicetestautomation.com/logged-in-successfully/";
-		Assert.assertEquals(actual_Url, expected_Url);
-		System.out.println("URL is Successfully verified");
-				
-//		if(BaseClass.getDriver().getCurrentUrl().equals("https://practicetestautomation.com/logged-in-successfully/"))
-//		{
-//			System.out.println("URL Verified Successfully!");
-//		}
-//		
-//		else
-//		{
-//			System.out.println("Couldn't be able to verify the URL");
-//		}		
+		Assert.assertEquals(actual_Url, expected_Url);		
 
 	}
 

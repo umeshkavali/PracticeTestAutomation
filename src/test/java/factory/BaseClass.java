@@ -8,6 +8,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class BaseClass
@@ -22,21 +23,22 @@ public static WebDriver initilizeBrowser() throws IOException
 {
 	
 	if(getProperties().getProperty("execution_env").equalsIgnoreCase("local"))
-		{
-			switch(getProperties().getProperty("browser").toLowerCase()) 
-			{
-			case "chrome":
-		        driver=new ChromeDriver(); break;
-		    case "edge":
-		    	driver=new EdgeDriver(); break;
-//		    case "firefox":
-//		    	driver = new FirefoxDriver(); break;
+	{
 
-		    default:
-		        System.out.println("No matching browser");
-//		        driver=null;
-			}
+		switch(getProperties().getProperty("browser").toLowerCase()) 
+		{
+		case "chrome":
+	        driver=new ChromeDriver(); break;
+	    case "edge":
+	    	driver=new EdgeDriver(); break;
+	    case "firefox":
+	    	driver = new FirefoxDriver(); break;
+
+	    default:
+	        System.out.println("No matching browser");
 		}
+	
+	}
 	
 	 driver.manage().deleteAllCookies(); 
 	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
