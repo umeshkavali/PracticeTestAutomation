@@ -16,9 +16,9 @@ public class BaseClass
 	
 	static WebDriver driver;
     static Properties p;
-//     static Logger logger;
+//  static Logger logger;
   	     
-@SuppressWarnings("deprecation")
+//@SuppressWarnings("deprecation")
 public static WebDriver initilizeBrowser() throws IOException
 {
 	
@@ -27,6 +27,7 @@ public static WebDriver initilizeBrowser() throws IOException
 
 		switch(getProperties().getProperty("browser").toLowerCase()) 
 		{
+		
 		case "chrome":
 	        driver=new ChromeDriver(); break;
 	    case "edge":
