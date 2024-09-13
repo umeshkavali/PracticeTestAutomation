@@ -63,13 +63,4 @@ public static Properties getProperties() throws IOException
 	return p;
 }
 
-//public static Logger getLogger() 
-//{		 
-//	logger=LogManager.getLogger(); //Log4j
-//	return logger;
-//}
-
-
-
-
 }
