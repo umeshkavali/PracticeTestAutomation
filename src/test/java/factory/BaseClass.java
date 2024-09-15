@@ -16,9 +16,7 @@ public class BaseClass
 	
 	static WebDriver driver;
     static Properties p;
-//  static Logger logger;
   	     
-//@SuppressWarnings("deprecation")
 public static WebDriver initilizeBrowser() throws IOException
 {
 	
