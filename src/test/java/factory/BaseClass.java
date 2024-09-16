@@ -6,9 +6,12 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BaseClass
@@ -59,6 +62,21 @@ public static Properties getProperties() throws IOException
     p=new Properties();
 	p.load(file);
 	return p;
+}
+
+public void waitForElementToBeClickable(int time, WebElement locator) 
+{
+    new WebDriverWait(driver, Duration.ofSeconds(time)).until(ExpectedConditions.elementToBeClickable(locator));
+}
+
+public void waitForElementToBePresent(int time, WebElement locator) 
+{
+    new WebDriverWait(driver, Duration.ofSeconds(time)).until(ExpectedConditions.visibilityOf(locator));
+}
+
+public void waitUntilElementNotDisplayed(int time, WebElement locator) 
+{
+    new WebDriverWait(driver, Duration.ofSeconds(time)).until(ExpectedConditions.invisibilityOf(locator));
 }
 
 }
