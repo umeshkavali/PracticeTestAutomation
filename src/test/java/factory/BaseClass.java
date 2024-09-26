@@ -17,8 +17,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BaseClass
 {
 	
-	static WebDriver driver;
-    static Properties p;
+	public static WebDriver driver;
+    public static Properties p;
   	     
 public static WebDriver initilizeBrowser() throws IOException
 {
